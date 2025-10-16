@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+*{
+    --btn-color: rgb(255,86,18);
+    font-family:'Montserrat' , sans-serif;
+}
+
+#root{
+    @apply w-full max-w-screen bg-black overflow-x-hidden;
+}
+
+
+@layer base{
+    .flex-center{
+        @apply flex justify-center items-center;
+    }
+    .scroll-hide::--webkit-scrollbar{
+        display: hidden;
+    }
+}
+
+@layer utilities {
+    .scroll-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scroll-hide {
+      -ms-overflow-style: none; /* IE & Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
