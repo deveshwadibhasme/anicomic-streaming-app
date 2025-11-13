@@ -5,7 +5,7 @@ import Footer from "./components/layouts/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen max-w-screen-xl mx-auto bg-black">
+    <div className="min-h-screen max-w-screen-2xl w-full">
       <Header />
         <Outlet />
       {/* <Footer /> */}
