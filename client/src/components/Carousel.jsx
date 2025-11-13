@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
-import image from "../assets/nightmare-bg.png";
+
 
 const Carousel = ({ slides }) => {
   return (
@@ -46,7 +46,7 @@ const Carousel = ({ slides }) => {
                 </a>
               </div>
               <img
-                src={image}
+                src={data.image}
                 alt={`Slide ${index + 1}`}
                 className="h-screen w-full rounded-lg"
               />

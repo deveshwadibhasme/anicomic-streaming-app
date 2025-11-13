@@ -1,7 +1,7 @@
 export const getImage = (imagePath) => {
   const localUrl = "http://localhost:5173/";
-  const vercelUrl = "https://anicomicstudio.vercel.app/";
-  const hostedUrl = "https://anicomicstudio.com/";
+  const vercelUrl = "https://anicomic.vercel.app/";
+  const hostedUrl = "https://anicomic.in/";
 
     if(location.href === localUrl) {
       return `/src/assets/${imagePath}`;

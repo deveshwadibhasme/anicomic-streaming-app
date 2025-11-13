@@ -1,6 +1,7 @@
 import React from "react";
 import { getImage } from "../../utils/get-image";
 import { Link } from "react-router-dom";
+import logo from '../../assets/icons/anicomic-logo.png'
 
 const Header = () => {
   const navLink = [
@@ -30,7 +31,7 @@ const Header = () => {
     <header className="max-w-screen w-full fixed top-0 left-1/2 -translate-x-1/2 z-20 flex flex-col md:flex-row justify-between mx-auto bg-gradient-to-t from-0% to-black">
       <div className="w-48 min-h-18 p-1 rounded-lg text-white flex gap-1 items-center text-lg font-bold">
         <img
-          src={getImage("/icons/anicomic-logo.png")}
+          src={logo}
           alt="logo"
           className="w-15 h-full object-cover"
         />

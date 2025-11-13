@@ -2,14 +2,20 @@ import React, { useEffect, useState } from "react";
 import Carousel from "../components/Carousel";
 import { Project } from "../components/layouts/Project";
 import axios from "axios";
+import { slides } from "../jsons/json";
 
 const Home = () => {
-  const [slides, setSlides] = useState([]);
+  const [slide, setSlides] = useState([]);
 
   useEffect(() => {
     axios
       .get("/src/jsons/slides.json")
-      .then((result) => setSlides(result.data))
+      .then((result) => {
+        if (result) {
+          setSlides(result.data);
+        }
+        setSlides(slides);
+      })
       .catch((error) => {
         console.error("Fetching Error:", error);
       });
@@ -17,7 +23,7 @@ const Home = () => {
 
   return (
     <>
-      <Carousel slides={slides} />
+      <Carousel slides={slide} />
       <Project />
     </>
   );
