@@ -8,8 +8,21 @@
     --font-logo: 'Rubik Mono One', sans-serif;
 
     --color-bright-red:#ff3131;
+    --color-vivid-red:#ff0000;
     --color-dark-red:#94261c;
     --color-fade-red:#94261c;
+
+    --color-light-yellow:#ffde59;
+
+    --color-vivid-indigo:#1800ad;
+
+    /* for gradient */
+    --color-gradient-indigo:#590055;
+    --color-gradient-red:#590000;
+    --color-gradient-green:#0b8f00;
+    --color-gradient-brown:#8f2b00;
+    --color-gradient-blue:#0014c8;
+
 }
 
 #root{

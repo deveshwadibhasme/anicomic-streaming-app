@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 
 import ContactUs from "./pages/ContactUs.jsx";
+import Career from "./pages/Career.jsx";
 
 
 const routes = createBrowserRouter([
@@ -16,6 +17,10 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/career",
+        element: <Career />,
       },
       {
         path: "/contact-us",
