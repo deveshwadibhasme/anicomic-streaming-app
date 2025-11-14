@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { getImage } from "../../utils/get-image";
 import { Link } from "react-router-dom";
-import logo from '../../assets/icons/anicomic-logo.png'
+import logo from "../../assets/icons/anicomic-logo.png";
 
 const Header = () => {
   const navLink = [
@@ -27,21 +27,28 @@ const Header = () => {
     },
   ];
 
+  const [title, setTitle] = useState();
+
   return (
     <header className="max-w-screen w-full fixed top-0 left-1/2 -translate-x-1/2 z-20 flex flex-col md:flex-row justify-between mx-auto bg-gradient-to-t from-0% to-black">
-      <div className="w-48 min-h-18 p-1 rounded-lg text-white flex gap-1 items-center text-lg font-bold">
-        <img
-          src={logo}
-          alt="logo"
-          className="w-15 h-full object-cover"
-        />
-        <span className="font-logo">Anicomic</span>
-      </div>
+      <Link
+        onClick={() =>
+          setTitle('Anicomic')
+        }
+        to={"/"}
+        className="w-48 min-h-18 p-1 rounded-lg text-white flex gap-1 items-center text-lg font-bold"
+      >
+        <img src={logo} alt="logo" className="w-15 h-full object-cover" />
+        <span className="font-logo">{title || "Anicomic"}</span>
+      </Link>
 
       <nav className="min-w-1/2 w-max text-white flex justify-between ml-auto items-center gap-2 mr-5">
         {navLink.map((nav, i) => {
           return (
             <Link
+              onClick={() =>
+                setTitle(nav.title === "Career" ? "Internship" : nav.title)
+              }
               key={i}
               to={nav.link}
               className="bg-gradient-to-t from-white hover:from-red-700 to-10% transition-colors duration-300 p-2 px-3"
