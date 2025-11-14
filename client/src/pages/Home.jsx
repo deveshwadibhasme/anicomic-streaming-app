@@ -11,13 +11,15 @@ const Home = () => {
     axios
       .get("/src/jsons/slides.json")
       .then((result) => {
-        if (result) {
+        if (Array.isArray(result.data) && result.data.length > 0) {
+
           setSlides(result.data);
         }
         setSlides(slides);
       })
       .catch((error) => {
         console.error("Fetching Error:", error);
+        setSlides(slides)
       });
   }, []);
 

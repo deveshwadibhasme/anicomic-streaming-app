@@ -3,19 +3,23 @@ import axios from "axios";
 import { projectList } from "../../jsons/json";
 
 export const Project = () => {
-  const [projectData, setProjectData] = useState([]);
+  const [projectData, setProjectData] = useState(projectList);
 
   useEffect(() => {
     axios
       .get("/src/jsons/project-list.json")
       .then((result) => {
-        if (result) {
+        if (Array.isArray(result.data) && result.data.length > 0) {
+
           setProjectData(result.data);
+        } else {
+
+          setProjectData(projectList);
         }
-        setProjectData(projectList);
       })
       .catch((error) => {
         console.error("Fetching Error:", error);
+        setProjectData(projectList);
       });
   }, []);
 
