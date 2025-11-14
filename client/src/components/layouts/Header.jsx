@@ -19,7 +19,7 @@ const Header = () => {
     },
     {
       title: "Contact",
-      link: "/contact",
+      link: "/contact-us",
     },
     {
       title: "Help",
@@ -36,10 +36,10 @@ const Header = () => {
           setTitle('Anicomic')
         }
         to={"/"}
-        className="w-48 min-h-18 p-1 rounded-lg text-white flex gap-1 items-center text-lg font-bold"
+        className="w-48 min-h-18 p-1 rounded-lg text-white flex gap-1 items-center text-lg"
       >
-        <img src={logo} alt="logo" className="w-15 h-full object-cover" />
-        <span className="font-logo">{title || "Anicomic"}</span>
+        <img src={logo} alt="logo" className="w-15 h-full object-cover " />
+        <span className="font-logo uppercase">{title || "Anicomic"}</span>
       </Link>
 
       <nav className="min-w-1/2 w-max text-white flex justify-between ml-auto items-center gap-2 mr-5">

@@ -1,87 +1,73 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+import {
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaGlobe,
+  FaEnvelope,
+} from "react-icons/fa";
+import Logo from "../../assets/icons/anicomic.png";
 
-const Footer = () => {
+export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-black text-gray-300 py-16">
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* For Traders Section */}
-        <div>
-          <h2 className="text-white text-xl font-semibold mb-4">For Traders</h2>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white transition">Trading Mastermind</a></li>
-            <li><a href="#" className="hover:text-white transition">Futures & Options Blueprint</a></li>
-            <li><a href="#" className="hover:text-white transition">51 Trading Strategies</a></li>
-          </ul>
-        </div>
+    <footer className="bg-black text-white py-5 px-8 md:px-16 flex flex-col">
+      <img src={Logo} alt="Anicomic Studio Logo" className="w-44 mb-4" />
 
-        {/* For Investors Section */}
-        <div>
-          <h2 className="text-white text-xl font-semibold mb-4">For Investors</h2>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white transition">Money Smart in your 20s & 30s</a></li>
-            <li><a href="#" className="hover:text-white transition">Stock Investing Mastermind</a></li>
-          </ul>
-        </div>
+      <div className="flex gap-10 max-w-screen-xl w-full justify-between mt-10 flex-wrap">
+        <div className="max-w-lg w-full">
+          <p className="text-gray-300 leading-relaxed mb-6">
+            Anicomic Studio is a creative hub where stories turn into comics,
+            movies, podcasts, and animated worlds. We believe in imagination,
+            innovation, and bringing fresh narratives to life.
+          </p>
 
-        {/* Quick Links Section */}
-        <div>
-          <h2 className="text-white text-xl font-semibold mb-4">Quick Links</h2>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white transition">Books & Courses</a></li>
-            <li><a href="#" className="hover:text-white transition">Schools</a></li>
-            <li><a href="#" className="hover:text-white transition">Authors</a></li>
-            <li><a href="#" className="hover:text-white transition">Partnerships & Collaborations</a></li>
-            <li><a href="#" className="hover:text-white transition">Login</a></li>
-            <li><a href="#" className="hover:text-white transition">Sitemap</a></li>
-          </ul>
-        </div>
-
-        {/* Company Section */}
-        <div>
-          <h2 className="text-white text-xl font-semibold mb-4">Company</h2>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white transition">About Us</a></li>
-            <li><a href="#" className="hover:text-white transition">Contact Us</a></li>
-            <li><a href="#" className="hover:text-white transition">Careers</a></li>
-            <li><a href="#" className="hover:text-white transition">For Designer</a></li>
-            <li><a href="#" className="hover:text-white transition">For Writers</a></li>
-            <li><a href="#" className="hover:text-white transition">Terms & Conditions</a></li>
-            <li><a href="#" className="hover:text-white transition">Help & Support</a></li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Shop Products Button */}
-      <div className="mt-12">
-        <a 
-          href="#" 
-          className="inline-flex items-center text-white hover:text-gray-300 transition"
-        >
-          <span className="text-xl font-semibold">Shop Products</span>
-          {/* <ChevronRight className="ml-2" /> */}
-        </a>
-      </div>
-
-      {/* Bottom Section */}
-      <div className="mt-16 pt-8 border-t border-gray-800">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-2xl font-bold text-white mb-4 md:mb-0">
-            ZEBRA<span className="font-normal">LEARN</span>
+          <div className="flex gap-4 text-2xl">
+            <FaPhoneAlt className="cursor-pointer hover:text-red-400" />
+            <FaMapMarkerAlt className="cursor-pointer hover:text-red-400" />
+            <FaGlobe className="cursor-pointer hover:text-red-400" />
+            <FaEnvelope className="cursor-pointer hover:text-red-400" />
           </div>
-          <div className="flex space-x-4">
-            <button className="bg-transparent border-2 border-[#FF4405] text-[#FF4405] px-4 py-2 rounded hover:bg-[#FF4405] hover:text-white transition">
-              Use App
-            </button>
-            <button className="bg-[#FF4405] text-white px-6 py-2 rounded hover:bg-[#FF3300] transition">
-              SIGN IN
-            </button>
+        </div>
+
+        <div>
+          <h3 className="font-semibold text-lg mb-4">Social Media</h3>
+          <div className="flex flex-col space-y-2 text-gray-300">
+            <Link to="/instagram">Instagram</Link>
+            <Link to="/youtube">YouTube</Link>
+            <Link to="/twitter">Twitter (X)</Link>
+            <Link to="/facebook">Facebook</Link>
+            <Link to="/fandom">Fandom</Link>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="font-semibold text-lg mb-4">Quick Link</h3>
+          <div className="flex flex-col space-y-2 text-gray-300">
+            <Link to="/">Home</Link>
+            <Link to="/showcase">Showcase</Link>
+            <Link to="/careers">Careers</Link>
+            <Link to="/about">About Us</Link>
+            <Link to="/contact">Contact Us</Link>
+            <Link to="/help">Help & FAQ</Link>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="font-semibold text-lg mb-4">Projects</h3>
+          <div className="flex flex-col space-y-2 text-gray-300">
+            <Link to="/project/nightmare">Nightmare</Link>
+            <Link to="/project/inside-my-heart">Inside my heart</Link>
+            <Link to="/project/arabian-knights">Arabian Knights</Link>
+            <Link to="/project/the-unknown">The Unknown</Link>
+            <Link to="/project/aniplay-headshot">Aniplay! Headshot</Link>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  )
+
+      <div className="text-center text-gray-400 mt-12 border-t border-gray-700 pt-6">
+        © {year} Anicomic Studio. All Rights Reserved.
+      </div>
+    </footer>
+  );
 }
-
-export default Footer

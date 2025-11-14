@@ -8,7 +8,7 @@ function App() {
     <div className="min-h-screen max-w-screen w-full">
       <Header />
         <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
