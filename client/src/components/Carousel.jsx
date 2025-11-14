@@ -5,7 +5,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 
-
 const Carousel = ({ slides }) => {
   return (
     <motion.section
@@ -24,7 +23,7 @@ const Carousel = ({ slides }) => {
         {slides.length > 0 &&
           slides.map((data, index) => (
             <SwiperSlide
-              className="w-screen h-screen relative mr-0"
+              className="w-screen h-screen relative mr-0 bg-cover"
               style={{ marginRight: 0 }}
               key={index}
             >
@@ -45,10 +44,12 @@ const Carousel = ({ slides }) => {
                   Listen Now on Spotify
                 </a>
               </div>
-              <img
-                src={data.image}
+
+              <div
+                // srcSet={`${data.image2} 600w, ${data.image} 1200w`}
                 alt={`Slide ${index + 1}`}
-                className="h-screen w-full rounded-lg"
+                className="bg-cover [background-position:50%_70%] md:bg-bottom w-full h-full"
+                 style={{ backgroundImage: `url(${data.image})` }}
               />
             </SwiperSlide>
           ))}
