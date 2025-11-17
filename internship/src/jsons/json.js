@@ -55,7 +55,7 @@ const courses = [
       registration: true,
       brochure: true
     },
-    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-green'
+    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-brown'
   },
   {
     id: "theWebwar",

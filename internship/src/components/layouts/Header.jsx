@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { getImage } from "../../utils/get-image";
 import { Link } from "react-router-dom";
 import logo from "../../assets/icons/anicomic-logo.png";
+import { FaBars } from "react-icons/fa";
+import { motion } from "framer-motion";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   const navLink = [
@@ -10,16 +13,20 @@ const Header = () => {
       link: "/",
     },
     {
-      title: "Career",
-      link: "/",
+      title: "Kraftor",
+      link: "https://kraftor.in",
     },
     {
-      title: "About",
-      link: "/",
+      title: "Career",
+      link: "https://internship.anicomic.in",
     },
     {
       title: "Contact",
       link: "/contact-us",
+    },
+    {
+      title: "About",
+      link: "/",
     },
     {
       title: "Help",
@@ -28,13 +35,15 @@ const Header = () => {
   ];
 
   const [title, setTitle] = useState();
+  const [display,setDisplay] = useState()
+  const handleMenu = () =>{
+    setDisplay(!display)
+  }
 
   return (
-    <header className="max-w-screen w-full fixed top-0 left-1/2 -translate-x-1/2 z-20 flex flex-col md:flex-row justify-between mx-auto bg-gradient-to-t from-0% to-black">
+    <header className="max-w-screen w-full sticky top-0 z-20 flex justify-between mx-auto bg-gradient-to-t from-0% to-black">
       <Link
-        onClick={() =>
-          setTitle('Anicomic')
-        }
+        onClick={() => setTitle("Anicomic")}
         href="https://anicomic.in"
         to={"https://anicomic.in"}
         className="w-48 min-h-18 p-1 rounded-lg text-white flex gap-1 items-center text-lg"
@@ -43,7 +52,7 @@ const Header = () => {
         <span className="font-logo uppercase">{title || "Internship"}</span>
       </Link>
 
-      <nav className="min-w-1/2 w-max text-white flex justify-between ml-auto items-center gap-2 mr-5">
+      <nav className="min-w-1/3 w-max text-white flex justify-between ml-auto items-center gap-2 mr-5">
         {navLink.map((nav, i) => {
           return (
             <Link
@@ -52,12 +61,16 @@ const Header = () => {
               }
               key={i}
               to={nav.link}
-              className="bg-gradient-to-t from-white hover:from-red-700 to-10% transition-colors duration-300 p-2 px-3"
+              className=" hover:text-red-700 hidden md:block to-10% transition-colors duration-300 p-2 px-3"
             >
               {nav.title}
             </Link>
           );
         })}
+        <MobileNav handleMenu={handleMenu} display={display} />
+        <span onClick={handleMenu} className="block md:hidden ml-auto">
+          <FaBars className="text-4xl" />
+        </span>
       </nav>
 
       {/* <div className="flex justify-between items-center min-w-25 w-fit">

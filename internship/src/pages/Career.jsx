@@ -41,9 +41,9 @@ const items = [
  
 const Career = () => {
   return (
-    <section className="w-full min-h-screen mx-auto mt-30 md:mt-18 text-white overflow-hidden">
+    <section className="w-full min-h-screen mx-auto mt-2 text-white overflow-hidden">
       <motion.div
-        className="w-full h-90 bg-cover bg-[50%] [filter: grayscale(40%) brightness(30%)] relative after:absolute after:inset-0 after:bg-black after:opacity-40"
+        className="w-full h-40 md:h-80 bg-cover bg-[50%] [filter: grayscale(40%) brightness(30%)] relative after:absolute after:inset-0 after:bg-black after:opacity-40"
         style={{ backgroundImage: `url(${AnimePoster})` }}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
