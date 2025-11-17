@@ -12,7 +12,6 @@ const Home = () => {
       .get("/src/jsons/slides.json")
       .then((result) => {
         if (Array.isArray(result.data) && result.data.length > 0) {
-          console.log('object');
           setSlides(result.data);
         }
         setSlides(slides);

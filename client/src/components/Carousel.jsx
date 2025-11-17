@@ -31,7 +31,7 @@ const Carousel = ({ slides }) => {
                 <div className="present-by uppercase font-serif mb-2 text-sm">
                   {data.presentBy}
                 </div>
-                <div className="title font-bold font-logo uppercase text-6xl">
+                <div className="title font-bold font-logo uppercase text-5xl md:text-6xl">
                   {data.title}
                 </div>
                 <div className="basic-info text-sm md:text-lg my-2 flex gap-4 border-1 w-fit px-2">
