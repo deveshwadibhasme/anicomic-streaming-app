@@ -1,0 +1,15 @@
+import { Outlet } from "react-router-dom";
+import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer";
+
+function App() {
+  return (
+    <div className="min-h-screen max-w-screen w-full">
+      <Header />
+        <Outlet />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;

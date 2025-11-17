@@ -7,15 +7,15 @@ const Header = () => {
   const navLink = [
     {
       title: "Showcase",
-      link: "/showcase",
+      link: "/",
     },
     {
       title: "Career",
-      link: "https://internship.anicomic.in",
+      link: "/",
     },
     {
       title: "About",
-      link: "/about",
+      link: "/",
     },
     {
       title: "Contact",
@@ -23,7 +23,7 @@ const Header = () => {
     },
     {
       title: "Help",
-      link: "/help",
+      link: "/",
     },
   ];
 
@@ -35,11 +35,12 @@ const Header = () => {
         onClick={() =>
           setTitle('Anicomic')
         }
-        to={"/"}
+        href="https://anicomic.in"
+        to={"https://anicomic.in"}
         className="w-48 min-h-18 p-1 rounded-lg text-white flex gap-1 items-center text-lg"
       >
         <img src={logo} alt="logo" className="w-15 h-full object-cover " />
-        <span className="font-logo uppercase">{title || "Anicomic"}</span>
+        <span className="font-logo uppercase">{title || "Internship"}</span>
       </Link>
 
       <nav className="min-w-1/2 w-max text-white flex justify-between ml-auto items-center gap-2 mr-5">
