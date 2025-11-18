@@ -2,6 +2,9 @@
 
 @theme {
   --font-logo: "Rubik Mono One", monospace;
+  --font-subtitle: "BBH Sans Hegarty", "Poppins", sans-serif;
+
+  --font-poppins: "Poppins", sans-serif;
 
   --color-bright-red: #ff3131;
   --color-vivid-red: #ff0000;
