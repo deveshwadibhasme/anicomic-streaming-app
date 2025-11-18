@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 
 import ContactUs from "./ContactUs";
+import HeadSection from "../components/layouts/HeadSection";
 
 const items = [
   {
@@ -42,45 +43,18 @@ const items = [
 const Career = () => {
   return (
     <section className="w-full min-h-screen mx-auto mt-2 text-white overflow-hidden">
-      <motion.div
-        className="w-full h-40 md:h-80 bg-cover bg-[50%] [filter: grayscale(40%) brightness(30%)] relative after:absolute after:inset-0 after:bg-black after:opacity-40"
-        style={{ backgroundImage: `url(${AnimePoster})` }}
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      ></motion.div>
-      <motion.div
-        className="min-h-70 h-full max-w-4xl mx-auto text-center p-10 font-subtitle font tracking-wider font-medium"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.h4
-          className="text-lg md:text-3xl font "
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          We are <span className="text-vivid-red font">RECRUITING</span>
-        </motion.h4>
-        <motion.h2
-          className="text-3xl md:text-5xl font"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          creative & awesome people
-        </motion.h2>
-        <p className="text-lg font-normal my-10 font-poppins">
-          Join our Internship Program and fast-track your growth...! <br />
+      
+      <HeadSection
+        poster={AnimePoster}
+        title={"We are"}
+        highlighted={"RECRUITING"}
+        subtitle={"creative & awesome people"}
+        paragraph={`Join our Internship Program and fast-track your growth...! <br />
           We’re onboarding smart, creative learners ready to upskill,
-          collaborate, and build real-world projects with{" "}
-          <span className="text-light-yellow font-bold">
-            Anicomic International
-          </span>
-          .
-        </p>
-      </motion.div>
+          collaborate, and build real-world projects with`}
+        highlightedPara={"Anicomic International"}
+      />
+
       <motion.div
         className="min-h-screen max-w-screen p-3 md:p-10 text-black bg-cover"
         style={{ backgroundImage: ` url(${paper})` }}
@@ -123,8 +97,8 @@ const Career = () => {
                 initial={{ x: x }}
                 whileInView={{ x: 0 }}
                 whileHover={{ scale: 1.04 }}
-                transition={{ duration: 0.4}}
-                viewport={{amount:0.4}}
+                transition={{ duration: 0.4 }}
+                viewport={{ amount: 0.4 }}
                 key={course.id}
                 className="max-w-80 min-h-50 h-full grid grid-rows-2 rounded-2xl overflow-hidden border ml-auto md:mx-auto ring-1 ring-offset-vivid-red shadow-vivid-indigo"
               >
