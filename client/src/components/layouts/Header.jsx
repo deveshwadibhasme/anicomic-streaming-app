@@ -41,7 +41,12 @@ const Header = () => {
   }
 
   return (
-    <header className="max-w-screen w-full sticky top-0 z-20 flex justify-between mx-auto bg-gradient-to-t from-0% to-black">
+    <motion.header
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-screen w-full sticky top-0 z-20 flex justify-between mx-auto bg-gradient-to-t from-0% to-black"
+    >
       <Link
         onClick={() => setTitle("Anicomic")}
         href="https://anicomic.in"
@@ -81,7 +86,7 @@ const Header = () => {
           Sign In
         </Link>
       </div> */}
-    </header>
+    </motion.header>
   );
 };
 
