@@ -1,39 +1,5 @@
 
 
-const projectList = [
-    {
-        "title": "Inside my Heart",
-        "category": "Podcast",
-        "language": ["Hindi"],
-        "poster": ""
-    },
-    {
-        "title": "The Unknown Origins",
-        "category": "Movies",
-        "language": ["English", "Hindi"],
-        "poster": ""
-    },
-    {
-        "title": "Arabian Knights",
-        "category": "Series",
-        "language": ["English", "Hindi"],
-        "poster": ""
-    },
-    {
-        "title": "The Unknown",
-        "category": "Comic",
-        "language": ["English"],
-        "poster": ""
-    },
-    {
-        "title": "The Nightmare",
-        "category": "Podcast",
-        "language": ["Hindi"],
-        "poster": ""
-    }
-]
-
-
 const courses = [
   {
     id: "krayon",
@@ -103,4 +69,4 @@ const courses = [
   }
 ];
 
-export { projectList ,courses}
+export { courses}
