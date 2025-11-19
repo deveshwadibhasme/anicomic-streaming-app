@@ -66,7 +66,7 @@ const Header = () => {
             </Link>
           );
         })}
-        <MobileNav handleMenu={handleMenu} display={display} />
+        <MobileNav setDisplay={setDisplay} handleMenu={handleMenu} display={display} />
         <span onClick={handleMenu} className="block md:hidden ml-auto -mr-2">
           <FaBars className="text-2xl" />
         </span>

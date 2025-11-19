@@ -12,6 +12,7 @@ import {
 
 import ContactUs from "./ContactUs";
 import HeadSection from "../components/layouts/HeadSection";
+import ProgramSlider from "../components/layouts/ProgramSlider";
 
 const items = [
   {
@@ -56,8 +57,8 @@ const Career = () => {
       />
 
       <motion.div
-        className="min-h-screen max-w-screen p-3 md:p-10 text-black bg-cover"
-        style={{ backgroundImage: ` url(${paper})` }}
+        className="min-h-screen hidden md:block max-w-screen p-3 md:p-10 text-black bg-white"
+        // style={{ backgroundImage: ` url(${paper})` }}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
@@ -128,6 +129,9 @@ const Career = () => {
           })}
         </motion.div>
       </motion.div>
+
+      <ProgramSlider />
+
       <motion.div
         className="text-center py-16 bg-black text-white"
         initial={{ opacity: 0, y: 50 }}
@@ -146,7 +150,7 @@ const Career = () => {
         </motion.h2>
 
         <motion.p
-          className="max-w-4xl mx-auto text-gray-300 mb-12 font-poppins"
+          className="max-w-4xl mx-auto text-gray-300 mb-12 font-poppins text-sm"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -170,13 +174,12 @@ const Career = () => {
                 viewport={{ once: false, amount:0.5 }}
                 transition={{
                   duration: 0.2,
-                  ease:'easeInOut'
                 }}
               >
                 <span className="mx-auto">{item.icon}</span>
                 <h3 className="text-lg font-semibold text-center flex flex-col items-center justify-center">
                   <span>{item.title}</span>
-                  <span className="text-yellow-400 text-lg md:text-2xl font-subtitle font tracking-wider font-medium">
+                  <span className="text-yellow-400 text-lg lg:text-2xl font-subtitle font tracking-wider font-medium">
                     {item.highlight}
                   </span>
                 </h3>

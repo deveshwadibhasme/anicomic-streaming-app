@@ -5,14 +5,14 @@ const HeadSection = ({ poster,title,highlighted,subtitle,paragraph,highlightedPa
   return (
     <>
       <motion.div
-        className="w-full h-35 md:h-80 bg-cover bg-bottom md:bg-[60%] [filter: grayscale(40%) brightness(30%)] relative after:absolute after:inset-0 after:bg-black after:opacity-40"
+        className="w-full h-35 sm:h-60 lg:h-80 bg-cover bg-center md:bg-[50%] [filter: grayscale(40%) brightness(30%)] relative after:absolute after:inset-0 after:bg-black after:opacity-40"
         style={{ backgroundImage: `url(${poster})` }}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       ></motion.div>
       <motion.div
-        className="min-h-70 h-full max-w-screeen mx-auto text-center p-10 font-subtitle bg-cover w-full font tracking-wider font-medium bg-blend-color-burn"
+        className="min-h-40 md:min-h-70 h-full max-w-screeen mx-auto text-center p-10 font-subtitle bg-cover w-full font tracking-wider font-medium bg-blend-color-burn"
         style={{ backgroundImage: `url(${doodle})`}}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
