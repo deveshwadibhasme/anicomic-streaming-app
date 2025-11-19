@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getImage } from "../../utils/get-image";
 import { Link } from "react-router-dom";
-import logo from "../../assets/icons/anicomic-logo.png";
+import logo from "../../assets/icons/internship.jpg";
 import { FaBars } from "react-icons/fa";
 import { motion } from "framer-motion";
 import MobileNav from "./MobileNav";
@@ -46,10 +46,9 @@ const Header = () => {
         onClick={() => setTitle("Anicomic")}
         href="https://anicomic.in"
         to={"https://anicomic.in"}
-        className="w-48 min-h-18 p-1 rounded-lg text-white flex gap-1 items-center text-lg"
+        className="min-h-10 p-1 rounded-lg text-white flex items-center text-lg my-1"
       >
-        <img src={logo} alt="logo" className="w-15 h-full object-cover " />
-        <span className="font-logo uppercase">{title || "Internship"}</span>
+        <img src={logo} alt="logo" className="w-35  h-full object-cover " />
       </Link>
 
       <nav className="min-w-1/3 w-max text-white flex justify-between ml-auto items-center gap-2 mr-5">
@@ -68,8 +67,8 @@ const Header = () => {
           );
         })}
         <MobileNav handleMenu={handleMenu} display={display} />
-        <span onClick={handleMenu} className="block md:hidden ml-auto">
-          <FaBars className="text-4xl" />
+        <span onClick={handleMenu} className="block md:hidden ml-auto -mr-2">
+          <FaBars className="text-2xl" />
         </span>
       </nav>
 

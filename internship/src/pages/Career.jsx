@@ -42,14 +42,14 @@ const items = [
 
 const Career = () => {
   return (
-    <section className="w-full min-h-screen mx-auto mt-2 text-white overflow-hidden">
+    <section className="w-full min-h-screen mx-auto  text-white overflow-hidden">
       
       <HeadSection
         poster={AnimePoster}
         title={"We are"}
         highlighted={"RECRUITING"}
         subtitle={"creative & awesome people"}
-        paragraph={`Join our Internship Program and fast-track your growth...! <br />
+        paragraph={`Join our Internship Program and fast-track your growth...!
           We’re onboarding smart, creative learners ready to upskill,
           collaborate, and build real-world projects with`}
         highlightedPara={"Anicomic International"}
@@ -64,7 +64,7 @@ const Career = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.h1
-          className="text-4xl font-subtitle font tracking-wider font-medium"
+          className="text-3xl font-subtitle font tracking-wider font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -74,7 +74,7 @@ const Career = () => {
           <span className="text-vivid-indigo font-bold">Programs</span>
         </motion.h1>
         <motion.p
-          className="text-lg font-medium my-5"
+          className="text-[12px] font-medium my-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -100,23 +100,23 @@ const Career = () => {
                 transition={{ duration: 0.4 }}
                 viewport={{ amount: 0.4 }}
                 key={course.id}
-                className="max-w-80 min-h-50 h-full grid grid-rows-2 rounded-2xl overflow-hidden border ml-auto md:mx-auto ring-1 ring-offset-vivid-red shadow-vivid-indigo"
+                className="max-w-80 min-h-30 md:min-h-60 h-55 md:h-full grid grid-rows-2 rounded-2xl overflow-hidden border mx-auto md:mx-auto ring-1 ring-offset-vivid-red shadow-vivid-indigo"
               >
-                <img src="/" className="row-span-0 bg-red-50" alt="" />
+                <img src={course.image} className="row-span-0 bg-red-50 h-full w-full" alt="" />
                 <div
-                  className={`p-3 grid grid-rows-0 min-h-30 md:min-h-40 ${course.gradient}`}
+                  className={`p-2 grid grid-cols-0 min-h-28 md:min-h-40 ${course.gradient}`}
                 >
-                  <h3 className="row-span-0 font-bold text-light-yellow">
+                  <h3 className="row-span-0 font-bold text-light-yellow text-xs md:text-lg">
                     {course.title}
                   </h3>
-                  <p className="row-span-0 text-white font-light text-xs md:text-sm">
+                  <p className="row-span-0 text-white font-light text-[8px] md:text-sm">
                     {course.description}
                   </p>
                   <div className="row-span-0 ml-auto">
-                    {Object.keys(course.actions).map((btn) => (
+                    {Object.keys(course.actions).map((btn,idx) => (
                       <button
                         key={btn}
-                        className="p-1 text-xs mt-2 inline-block md:text-sm font-semibold rounded-xl ml-2 text-black capitalize bg-white"
+                        className={`p-1 text-[8px] -mt-4 border-1 inline-block md:text-[12px] font-semibold rounded-xl  ml-1 capitalize ${idx === 0 ? 'bg-white text-black ': 'bg-transparent text-white'}`}
                       >
                         {btn}
                       </button>
@@ -165,13 +165,12 @@ const Career = () => {
                 key={idx}
                 href={item.link}
                 className="max-w-60 border border-white rounded-xl p-8 hover:-translate-y-2 transition duration-200 w-full text-center"
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0.5, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
+                viewport={{ once: false, amount:0.5 }}
                 transition={{
-                  duration: 0.5,
-                  delay: delay,
-                  ease: "easeOut",
+                  duration: 0.2,
+                  ease:'easeInOut'
                 }}
               >
                 <span className="mx-auto">{item.icon}</span>

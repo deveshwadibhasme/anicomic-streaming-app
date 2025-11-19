@@ -1,4 +1,9 @@
-
+import k from '../assets/7.png'
+import f from '../assets/2.png'
+import w from '../assets/4.png'
+import m from '../assets/5.png'
+import c from '../assets/1.png'
+import b from '../assets/6.png'
 
 const courses = [
   {
@@ -10,7 +15,8 @@ const courses = [
       registration: true,
       brochure: true
     },
-    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-indigo'
+    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-indigo',
+    image:k
   },
   {
     id: "forged3d",
@@ -21,7 +27,8 @@ const courses = [
       registration: true,
       brochure: true
     },
-    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-brown'
+    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-brown',
+    image:f
   },
   {
     id: "theWebwar",
@@ -32,7 +39,8 @@ const courses = [
       registration: true,
       brochure: true
     },
-    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-green'
+    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-green',
+    image:w
   },
   {
     id: "motionSpear",
@@ -43,7 +51,8 @@ const courses = [
       registration: true,
       brochure: true
     },
-    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-brown'
+    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-brown',
+    image:m
   },
   {
     id: "codeMania",
@@ -54,7 +63,8 @@ const courses = [
       registration: true,
       brochure: true
     },
-    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-blue'
+    gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-blue',
+    image:c
   },
   {
     id: "bladeCut",
@@ -65,7 +75,8 @@ const courses = [
       registration: true,
       brochure: true
     },
-    gradient: 'bg-gradient-to-r from-black/90 from-5% to-vivid-red'
+    gradient: 'bg-gradient-to-r from-black/90 from-5% to-vivid-red',
+    image:b
   }
 ];
 
