@@ -7,6 +7,7 @@ import Home from "./pages/Home.jsx";
 
 import ContactUs from "./pages/ContactUs.jsx";
 import Career from "./pages/Career.jsx";
+import ComingSoon from "../../internship/src/pages/ComingSoon.jsx";
 
 
 const routes = createBrowserRouter([
@@ -26,6 +27,10 @@ const routes = createBrowserRouter([
         path: "/contact-us",
         element: <ContactUs />,
       },
+      {
+        path: "/not-available",
+        element: <ComingSoon />,
+      }
     ],
   },
 ]);

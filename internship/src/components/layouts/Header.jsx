@@ -30,7 +30,7 @@ const Header = () => {
   const [title, setTitle] = useState();
 
   return (
-    <header className="max-w-screen w-full fixed top-0 left-1/2 -translate-x-1/2 z-20 flex flex-col md:flex-row justify-between mx-auto bg-gradient-to-t from-0% to-black">
+    <header className="max-w-screen w-full fixed top-0 left-1/2 -translate-x-1/2 z-20 flex flex-col md:flex-row justify-between mx-auto bg-gradient-to-t from-0% to-black overflow-y-auto">
       <Link
         onClick={() =>
           setTitle('Anicomic')

@@ -7,6 +7,7 @@ import App from "./App.jsx";
 import ContactUs from "./pages/ContactUs.jsx";
 import Career from "./pages/Career.jsx";
 import Download from "./pages/Download.jsx";
+import ComingSoon from "./pages/ComingSoon.jsx";
 
 
 const routes = createBrowserRouter([
@@ -26,6 +27,10 @@ const routes = createBrowserRouter([
         path: "/downloads",
         element: <Download />,
       },
+      {
+        path: "/not-available",
+        element: <ComingSoon />
+      }
     ],
   },
 ]);
