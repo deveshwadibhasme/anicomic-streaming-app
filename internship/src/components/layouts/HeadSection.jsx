@@ -34,7 +34,7 @@ const HeadSection = ({ poster,title,highlighted,subtitle,paragraph,highlightedPa
         >
           {subtitle}.
         </motion.h2>
-        <p className="text-[12px] leading-4 md:leading-7 md:text-sm mx-auto max-w-xl font-normal my-4 md:my-5 font-poppins tracking-wide">
+        <p className="text-[12px] leading-4 md:leading-7 md:text-sm mx-auto max-w-xl font-normal mt-2 md:my-5 font-poppins tracking-wide">
           {paragraph}{" "}
           <span className="text-light-yellow font-bold">
             {highlightedPara}.

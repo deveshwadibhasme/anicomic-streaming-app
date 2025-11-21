@@ -16,8 +16,8 @@ const InternshipForm = () => {
   });
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  },[]);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -29,8 +29,8 @@ const InternshipForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    alert("Application Submitted! (Check console for data)");
+    console.log("Inactive Form:", formData);
+    alert("Inactive Form:");
   };
 
   return (
@@ -51,6 +51,32 @@ const InternshipForm = () => {
         className="space-y-6 z-10 relative p-6 rounded-lg"
         onSubmit={handleSubmit}
       >
+        <div>
+        <img src={qr} className="h-60 w-60 mx-auto block" alt="" />
+         <div className="text-white">
+            <label
+              htmlFor="internship"
+              className="block text-sm font-medium text-white bg-grad px-3 rounded-lg w-fit  mb-1"
+            >
+              Internship
+            </label>
+            <select
+              type="text"
+              id="internship"
+              name="internship"
+              className="w-full px-4 py-2 border-b-2 border-vivid-red outline-none rounded-md focus:ring-bright-red text-white"
+              placeholder="Your Name"
+              value={formData.internship}
+              onChange={handleChange}
+              required
+            >
+              <option className="text-black" value="graphic-design">Graphic Design</option>
+              <option className="text-black" value="video-editing">Video Editing</option>
+              <option className="text-black" value="web-developement">Web Developement</option>
+              <option className="text-black" value="3d-animation">3D Animation</option>
+            </select>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label
@@ -64,7 +90,7 @@ const InternshipForm = () => {
               id="fullName"
               name="fullName"
               className="w-full px-4 py-2 border-b-2 border-vivid-red outline-none rounded-md focus:ring-bright-red"
-              placeholder=""
+              placeholder="Your Name"
               value={formData.fullName}
               onChange={handleChange}
               required
@@ -135,7 +161,7 @@ const InternshipForm = () => {
               id="passportPhoto"
               name="passportPhoto"
               accept="image/*" // Accept only image files
-              className="w-full px-4 py-2 border-b-2 border-vivid-red outline-none rounded-md focus:ring-bright-red file:mr-4 file:py-2file:py-1 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-grad file:text-white hover:file:bg-red-700"
+              className="w-full px-4 py-2 border-b-2 border-vivid-red outline-none rounded-md focus:ring-bright-red file:mr-4 file:py-1  file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-grad file:text-white file:bg-red-700"
               onChange={handleChange}
               required
             />
@@ -193,7 +219,6 @@ const InternshipForm = () => {
             />
           </div>
         </div>
-        <img src={qr} className="h-50 w-50 mx-auto block" alt="" />
         <button
           type="submit"
           className="w-full py-3 mt-6 bg-gradient-red hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 rounded-md font-semibold text-lg transition-colors"

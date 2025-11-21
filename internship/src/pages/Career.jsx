@@ -72,7 +72,7 @@ const Career = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.h1
-          className="text-sm  md:text-3xl font-subtitle font tracking-wider font-medium"
+          className="text-3xl font-subtitle font tracking-wider font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -141,7 +141,7 @@ const Career = () => {
       <ProgramSlider />
 
       <motion.div
-        className="text-center py-16 bg-black text-white"
+        className="text-center py-4 bg-black text-white"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
