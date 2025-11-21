@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import AnimePoster from "../assets/anime-city.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeadSection from "../components/layouts/HeadSection";
 import FilteredSearch from "../components/FilteredSearch";
 import { FaDownload } from "react-icons/fa";
 
 const Download = () => {
   const [data, setData] = useState();
+
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },[]);
 
   return (
     <section className="w-full min-h-screen mx-auto mt-2 text-white overflow-hidden">
@@ -27,50 +31,50 @@ const Download = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="overflow-x-auto max-w-6xl mx-auto p-4 bg-white rounded-lg shadow-lg"
+          className="overflow-x-auto max-w-6xl mx-auto p-4 bg-gray-800 rounded-lg shadow-lg"
         >
-          <table className="min-w-full divide-y divide-gray-700">
-            <thead className="bg-white/20">
+          <table className="min-w-full divide-y divide-gray-600">
+            <thead className="bg-gray-700">
               <tr>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-bold text-vivid-indigo uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-xs font-bold text-gray-300 uppercase tracking-wider"
                 >
                   Name
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-sm font-bold text-vivid-indigo  uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-sm font-bold text-gray-300 uppercase tracking-wider"
                 >
                   Roll No
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-sm font-bold text-vivid-indigo  uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-sm font-bold text-gray-300 uppercase tracking-wider"
                 >
                   Certificate
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-sm font-bold text-vivid-indigo  uppercase tracking-wider"
+                  className="px-6 py-3 text-left text-sm font-bold text-gray-300 uppercase tracking-wider"
                 >
                   Offer Letter
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-700">
+            <tbody className="bg-gray-900 divide-y divide-gray-700">
               {data.map((item, index) => (
                 <motion.tr
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.2 }}
-                  className="hover:bg-black/20"
+                  className={index % 2 === 0 ? "bg-gray-900 hover:bg-gray-700" : "bg-gray-800 hover:bg-gray-700"}
                 >
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-bright-red">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100">
                     {item.name}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-bright-red">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
                     {item.rollNo}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-400 hover:text-blue-300">
@@ -84,7 +88,7 @@ const Download = () => {
                         <FaDownload className="mr-1" /> Download
                       </a>
                     ) : (
-                      <span className="text-gray-500">#</span>
+                      <span className="text-gray-500">N/A</span>
                     )}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-400 hover:text-blue-300">
@@ -98,7 +102,7 @@ const Download = () => {
                         <FaDownload className="mr-1" /> Download
                       </a>
                     ) : (
-                      <span className="text-gray-500">#</span>
+                      <span className="text-gray-500">N/A</span>
                     )}
                   </td>
                 </motion.tr>
@@ -111,7 +115,7 @@ const Download = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center text-gray-400 text-lg"
+          className="text-center text-gray-400 text-sm"
         >
           Please select a batch to view intern data.
         </motion.p>

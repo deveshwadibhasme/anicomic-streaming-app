@@ -41,13 +41,13 @@ const ComingSoon = () => {
           className="text-3xl md:text-7xl font-bold mb-4 font-subtitle tracking-wider"
           variants={itemVariants}
         >
-          <span className="text-light-yellow">Coming</span> Soon!
+          <span className="text-light-yellow">We are</span> Working on it!
         </motion.h1>
         <motion.p
           className="text-sm md:text-2xl mb-8 font-poppins"
           variants={itemVariants}
         >
-          We're working hard to bring you something amazing. Stay tuned!
+          to bring you something amazing. Stay tuned!
         </motion.p>
 
         <motion.div

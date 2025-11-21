@@ -13,6 +13,8 @@ import {
 import ContactUs from "./ContactUs";
 import HeadSection from "../components/layouts/HeadSection";
 import ProgramSlider from "../components/layouts/ProgramSlider";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const items = [
   {
@@ -42,6 +44,11 @@ const items = [
 ];
 
 const Career = () => {
+
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },[]);
+
   return (
     <section className="w-full min-h-screen mx-auto  text-white overflow-hidden">
       
@@ -65,7 +72,7 @@ const Career = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.h1
-          className="text-3xl font-subtitle font tracking-wider font-medium"
+          className="text-sm  md:text-3xl font-subtitle font tracking-wider font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -114,13 +121,14 @@ const Career = () => {
                     {course.description}
                   </p>
                   <div className="row-span-0 ml-auto">
-                    {Object.keys(course.actions).map((btn,idx) => (
-                      <button
-                        key={btn}
+                    {Object.entries(course.actions).map(([key,value],idx) => (
+                      <Link
+                      to={value}
+                        key={key}
                         className={`p-1 text-[8px] -mt-4 border-1 inline-block md:text-[12px] font-semibold rounded-xl  ml-1 capitalize ${idx === 0 ? 'bg-white text-black ': 'bg-transparent text-white'}`}
                       >
-                        {btn}
-                      </button>
+                        {key}
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -140,7 +148,7 @@ const Career = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.h2
-          className="text-3xl font-subtitle font tracking-wider font-medium mb-4"
+          className="text-2xl font-subtitle font tracking-wider font-medium mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -150,7 +158,7 @@ const Career = () => {
         </motion.h2>
 
         <motion.p
-          className="max-w-4xl mx-auto text-gray-300 mb-12 font-poppins text-sm"
+          className="max-w-3xl w-full mx-auto text-gray-300 mb-12 px-3 font-poppins text-xs"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -161,29 +169,23 @@ const Career = () => {
           smooth and easy use.
         </motion.p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 items-center mx-auto max-w-6xl w-full p-2 justify-center gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 items-center mx-auto max-w-xl md:max-w-3xl w-full p-2 justify-center gap-2">
           {items.map((item, idx) => {
             const delay = 0.2 + idx * 0.1;
             return (
-              <motion.a
+              <Link
                 key={idx}
-                href={item.link}
-                className="max-w-60 border border-white rounded-xl p-8 hover:-translate-y-2 transition duration-200 w-full text-center"
-                initial={{ opacity: 0.5, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount:0.5 }}
-                transition={{
-                  duration: 0.2,
-                }}
+                to={item.link}
+                className="max-w-40 md:max-w-60 mx-auto min-h-30 border border-white rounded-xl p-3 hover:-translate-y-2 transition duration-200 w-full text-center"
               >
-                <span className="mx-auto">{item.icon}</span>
-                <h3 className="text-lg font-semibold text-center flex flex-col items-center justify-center">
+                <span className="mx-auto text-xs">{item.icon}</span>
+                <h3 className="text-sm md:text-lg font-semibold text-center flex flex-col items-center justify-center">
                   <span>{item.title}</span>
-                  <span className="text-yellow-400 text-lg lg:text-2xl font-subtitle font tracking-wider font-medium">
+                  <span className="text-yellow-400 text-sm lg:text-xl font-subtitle font tracking-wider font-medium">
                     {item.highlight}
                   </span>
                 </h3>
-              </motion.a>
+              </Link>
             );
           })}
         </div>

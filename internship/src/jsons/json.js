@@ -12,7 +12,7 @@ const courses = [
     description:
       "Learn design fundamentals step by step. Build skills to create clean and professional visuals.",
     actions: {
-      registration: true,
+      registration: '/registration',
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-indigo',
@@ -24,7 +24,7 @@ const courses = [
     description:
       "Understand how 3D models and animation work. Start creating simple scenes in Blender Software.",
     actions: {
-      registration: true,
+      registration: '/registration',
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-brown',
@@ -36,7 +36,7 @@ const courses = [
     description:
       "From fundamentals and advance to fullstack concepts with live projects in modern web technologies.",
     actions: {
-      registration: true,
+      registration: '/registration',
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-green',
@@ -48,7 +48,7 @@ const courses = [
     description:
       "Master high impact motion design, animation principles, transitions, and visual compositions.",
     actions: {
-      registration: true,
+      registration: '/registration',
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-brown',
@@ -60,7 +60,7 @@ const courses = [
     description:
       "Programming basics, logic building, and core C/C++ concepts used in software and game development.",
     actions: {
-      registration: true,
+      registration: '/registration',
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-blue',
@@ -72,7 +72,7 @@ const courses = [
     description:
       "Build strong editing skills, visual storytelling flow, and foundation-level VFX techniques for content creation.",
     actions: {
-      registration: true,
+      registration: '/registration',
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-vivid-red',

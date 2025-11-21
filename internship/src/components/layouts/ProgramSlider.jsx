@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { courses } from "../../jsons/json";
+import { Link } from "react-router-dom";
 
 const ProgramSlider = () => {
   return (
@@ -65,17 +66,18 @@ const ProgramSlider = () => {
                   {course.description}
                 </p>
                 <div className="row-span-0 ml-auto">
-                  {Object.keys(course.actions).map((btn, idx) => (
-                    <button
-                      key={btn}
+                  {Object.entries(course.actions).map(([key,value], idx) => (
+                    <Link
+                    to={value}
+                      key={key}
                       className={`p-1 text-[8px] -mt-4 border-1 inline-block md:text-[12px] font-semibold rounded-xl  ml-1 capitalize ${
                         idx === 0
                           ? "bg-white text-black "
                           : "bg-transparent text-white"
                       }`}
                     >
-                      {btn}
-                    </button>
+                      {key}
+                    </Link>
                   ))}
                 </div>
               </div>

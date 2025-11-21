@@ -9,39 +9,69 @@ import MobileNav from "./MobileNav";
 const Header = () => {
   const navLink = [
     {
-      title: "Showcase",
+      title: "Home",
       link: "/",
+      dropDown: false,
+    },
+    {
+      title: "Showcase",
+      link: false,
+      dropDown: [
+        { title: "Character", link: "/character" },
+        { title: "Comic", link: "/comic" },
+        { title: "Podcast", link: "/podcast" },
+        { title: "Live Action", link: "/live-action" },
+      ],
     },
     {
       title: "Kraftor",
       link: "https://kraftor.in",
+      dropDown: [
+        { title: "Kraftor Service", link: "https://kraftor.in/services/" },
+        { title: "Kraftor Team", link: "https://kraftor.in/team/" },
+        { title: "Kraftor Contact", link: "https://kraftor.in/contact/" },
+      ],
     },
     {
-      title: "Career",
+      title: "Internship",
       link: "https://internship.anicomic.in",
+      dropDown: [
+        { title: "Internship", link: "https://internship.anicomic.in" },
+        {
+          title: "Intern Portel",
+          link: "https://internship.anicomic.in/downloads",
+        },
+        { title: "Registration", link: "/not-available" },
+      ],
     },
     {
       title: "Contact",
       link: "/contact-us",
+      dropDown: false,
     },
     {
       title: "About",
-      link: "/",
+      link: "/not-available",
+      // dropDown: [
+      //   { title: "Character", link: "/character" },
+      //   { title: "Comic", link: "/comic" },
+      // ],
     },
     {
       title: "Help",
-      link: "/",
+      link: "/not-available",
+      dropDown: false,
     },
   ];
 
   const [title, setTitle] = useState();
-  const [display,setDisplay] = useState()
-  const handleMenu = () =>{
-    setDisplay(!display)
-  }
+  const [display, setDisplay] = useState();
+  const handleMenu = () => {
+    setDisplay(!display);
+  };
 
   return (
-    <header className="max-w-screen w-full sticky top-0 z-20 flex justify-between mx-auto bg-gradient-to-t from-0% to-black">
+    <header className="max-w-screen w-full sticky top-0 z-20 flex justify-between mx-auto bg-black md:bg-gradient-to-t from-0% to-black">
       <Link
         onClick={() => setTitle("Anicomic")}
         href="https://anicomic.in"
@@ -60,13 +90,17 @@ const Header = () => {
               }
               key={i}
               to={nav.link}
-              className=" hover:text-red-700 hidden md:block to-10% transition-colors duration-300 p-2 px-3"
+              className=" hover:text-red-700 font-semibold hidden md:block to-10% transition-colors duration-300 p-2 px-3"
             >
               {nav.title}
             </Link>
           );
         })}
-        <MobileNav setDisplay={setDisplay} handleMenu={handleMenu} display={display} />
+        <MobileNav
+          setDisplay={setDisplay}
+          handleMenu={handleMenu}
+          display={display}
+        />
         <span onClick={handleMenu} className="block md:hidden ml-auto -mr-2">
           <FaBars className="text-2xl" />
         </span>

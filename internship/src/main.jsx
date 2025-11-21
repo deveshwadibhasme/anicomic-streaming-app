@@ -8,12 +8,14 @@ import ContactUs from "./pages/ContactUs.jsx";
 import Career from "./pages/Career.jsx";
 import Download from "./pages/Download.jsx";
 import ComingSoon from "./pages/ComingSoon.jsx";
+import InternshipForm from "./components/layouts/InternshipForm.jsx";
 
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement:<ComingSoon />,
     children: [
       {
         path: "/",
@@ -26,6 +28,10 @@ const routes = createBrowserRouter([
       {
         path: "/downloads",
         element: <Download />,
+      },
+      {
+        path: "/registration",
+        element: <InternshipForm />,
       },
       {
         path: "/not-available",

@@ -17,7 +17,7 @@ const FilteredSearch = ({ setData }) => {
         setDropDownData(Object.keys(data));
       } catch (error) {
         console.error("Error fetching data:", error);
-        setDropDownData([]); 
+        setDropDownData([]);
       }
     };
     fetchData();
@@ -27,20 +27,22 @@ const FilteredSearch = ({ setData }) => {
     if (fetchedData && fetchedData[value]) {
       setData(fetchedData[value]);
     } else {
-      setData(null); 
+      setData(null);
     }
   };
 
   return (
-    <section className="max-w-6xl min-h-50 h-full mx-auto">
-      <div className="max-w-xl rounded-2xl p-3 border-white border mx-auto text-center py-4 text-xl">
-        Basic to Advanced Graphic Design{" "}
-        <FaAngleDown className="inline-block ml-4" />
-      </div>
+    <section className="max-w-6xl min-h-50 mt-4 h-full mx-auto">
+      <select className="max-w-lg rounded-2xl hover:rounded-none transition-all px-4 border-white border mx-auto text-center py-2 text-lg block">
+        <option value="">
+          Basic to Advanced Graphic Design{" "}
+          {/* <FaAngleDown className="inline-block ml-4" /> */}
+        </option>
+      </select>
       <select
-        className="max-w-lg w-full mt-4 rounded-2xl p-3 border-white border mx-auto text-center py-4 text-xl marker:hidden block relative"
+        className="max-w-sm mt-4 px-3 rounded-2xl hover:rounded-none transition-all border-white border mx-auto text-center py-1 text-lg marker:hidden block relative"
         onChange={(e) => handleSubmit(e.target.value)}
-        defaultValue="" 
+        defaultValue=""
       >
         <option
           value=""

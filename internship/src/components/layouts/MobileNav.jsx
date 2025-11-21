@@ -36,12 +36,12 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
       title: "Internship",
       link: false,
       dropDown: [
-        { title: "Internship", link: "https://internship.anicomic.in" },
+        { title: "Internship", link: "/" },
         {
           title: "Intern Portel",
           link: "https://internship.anicomic.in/downloads",
         },
-        { title: "Registration", link: "/not-available" },
+        { title: "Registration", link: "/registration" },
       ],
     },
     {
@@ -99,7 +99,7 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
                     nav.dropDown.map((drop, i) => {
                       return (
                         <motion.a
-                          href={drop.link}
+                          // href={drop.link}
                           key={i}
                           initial={{ x: -40, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}

@@ -11,13 +11,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white py-5 px-8 md:px-16 flex flex-col">
+    <footer className="bg-black text-white py-5 px-8 md:px-16 flex flex-col z-10 relative">
       <img src={Logo} alt="Anicomic Studio Logo" className="w-40 md:w-44" />
 
       <div className="flex gap-10 max-w-screen-xl w-full justify-between md:mt-10 flex-wrap">
         <div className="max-w-lg w-full">
           <p className="text-gray-300 text-sm md:text-lg leading-relaxed mb-6">
-            <b>Anicomic Studio </b>is a creative hub where stories turn into comics,
+            <b>Anicomic International </b>is a creative hub where stories turn into comics,
             movies, podcasts, and animated worlds. We believe in imagination,
             innovation, and bringing fresh narratives to life.
           </p>
@@ -67,7 +67,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center text-gray-400 mt-12 border-t border-gray-700 pt-6">
-        © {year} Anicomic Studio. All Rights Reserved.
+        © {year} Anicomic International. All Rights Reserved.
       </div>
     </footer>
   );

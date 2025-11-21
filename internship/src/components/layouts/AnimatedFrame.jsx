@@ -21,7 +21,7 @@ const AnimatedFrame = ({ children }) => {
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
         style={{
           border: "2px dotted",
-          borderImageSlice: 1,
+          borderImageSlice: 1,    
           borderImageSource: `linear-gradient(to right, #ff0000, #ffde59, #1800ad, #ff0000)`,
         }}
       />
