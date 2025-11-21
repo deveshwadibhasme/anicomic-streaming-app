@@ -92,29 +92,39 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
                   {nav.title}
                   {nav.dropDown && <FaCaretDown className="ml-auto" />}
                 </Link>
-                <div className="flex flex-col w-[40%] max-h-60 transition-all duration-150 h-auto">
-                  {nav.dropDown &&
-                    drop.drop &&
-                    drop.idx === idx &&
-                    nav.dropDown.map((drop, i) => {
-                      return (
-                        <motion.a
-                          // href={drop.link}
-                          key={i}
-                          initial={{ x: -40, opacity: 0 }}
-                          animate={{ x: 0, opacity: 1 }}
-                          exit={{ x: -10, opacity: 0.4 }}
-                          transition={{ ease: "easeIn", delay: 0.12 * i }}
-                          className="bg-bright-red/40 w-full p-2 rounded-xl cursor-pointer my-1"
-                          onClick={() => setDisplay(!display)}
-                        >
-                          <Link className="w-full min-w-full" to={drop.link}>
-                            {drop?.title}
-                          </Link>
-                        </motion.a>
-                      );
-                    })}
-                </div>
+                <AnimatePresence mode="wait">
+                  {nav.dropDown && drop.drop && drop.idx === idx && (
+                    <div className="flex flex-col w-[70%] max-h-60 transition-all duration-150 h-auto">
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className=""
+                      >
+                        {nav.dropDown.map((drop, i) => {
+                          return (
+                            <motion.div
+                              // href={drop.link}
+                              key={i}
+                              initial={{ x: -20, opacity: 0 }}
+                              animate={{ x: 0, opacity: 1 }}
+                              transition={{ delay: i * 0.1 }}
+                              className="bg-white/40 text-black w-full p-2 rounded-xl transition-all cursor-pointer my-1"
+                              onClick={() => setDisplay(!display)}
+                            >
+                              <Link
+                                className="w-full min-w-full transition-all"
+                                to={drop.link}
+                              >
+                                {drop?.title}
+                              </Link>
+                            </motion.div>
+                          );
+                        })}
+                      </motion.div>
+                    </div>
+                  )}
+                </AnimatePresence>
               </>
             );
           })}
