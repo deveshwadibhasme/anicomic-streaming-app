@@ -39,7 +39,7 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
         { title: "Internship", link: "/" },
         {
           title: "Intern Portel",
-          link: "https://internship.anicomic.in/downloads",
+          link: "/downloads",
         },
         { title: "Registration", link: "/registration" },
       ],
