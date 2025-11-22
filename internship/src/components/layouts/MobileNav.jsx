@@ -113,7 +113,7 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
                               onClick={() => setDisplay(!display)}
                             >
                               <Link
-                                className="w-full min-w-full transition-all"
+                                className="w-full min-w-full block transition-all"
                                 to={drop.link}
                               >
                                 {drop?.title}

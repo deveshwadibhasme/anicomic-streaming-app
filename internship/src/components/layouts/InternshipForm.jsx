@@ -29,7 +29,7 @@ const InternshipForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Inactive Form:", formData);
+    
     alert("Inactive Form:");
   };
 
@@ -53,7 +53,7 @@ const InternshipForm = () => {
       >
         <div>
         <img src={qr} className="h-60 w-60 mx-auto block" alt="" />
-         <div className="text-white">
+         <div className="text-white mt-4">
             <label
               htmlFor="internship"
               className="block text-sm font-medium text-white bg-grad px-3 rounded-lg w-fit  mb-1"

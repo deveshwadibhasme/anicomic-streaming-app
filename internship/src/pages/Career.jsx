@@ -169,7 +169,7 @@ const Career = () => {
           smooth and easy use.
         </motion.p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 items-center mx-auto max-w-xl md:max-w-3xl w-full p-2 justify-center gap-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 items-center mx-auto max-w-lg md:max-w-3xl w-full p-2 justify-center md:gap-x-5 gap-y-5">
           {items.map((item, idx) => {
             const delay = 0.2 + idx * 0.1;
             return (
