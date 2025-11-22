@@ -79,10 +79,10 @@ const Career = () => {
           transition={{ duration: 0.6 }}
         >
           Our Learning{" "}
-          <span className="text-vivid-indigo font-bold">Programs</span>
+          <span className="text-vivid-indigo font-bold uppercase">Programs</span>
         </motion.h1>
         <motion.p
-          className="text-[12px] font-medium my-5"
+          className="text-[10px] md:text-sm font-medium my-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -148,7 +148,7 @@ const Career = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.h2
-          className="text-2xl font-subtitle font tracking-wider font-medium mb-4"
+          className="textsm md:text-2xl font-subtitle font tracking-wider font-medium mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -158,7 +158,7 @@ const Career = () => {
         </motion.h2>
 
         <motion.p
-          className="max-w-3xl w-full mx-auto text-gray-300 mb-12 px-3 font-poppins text-xs"
+          className="max-w-3xl w-full mx-auto text-gray-300 mb-12 px-3 font-poppins text-[10px] md:text-sm"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}

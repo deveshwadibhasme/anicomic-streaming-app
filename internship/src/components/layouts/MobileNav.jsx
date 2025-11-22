@@ -27,9 +27,9 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
       title: "Kraftor",
       link: false,
       dropDown: [
-        { title: "Kraftor Service", link: "https://kraftor.in/services/" },
-        { title: "Kraftor Team", link: "https://kraftor.in/team/" },
-        { title: "Kraftor Contact", link: "https://kraftor.in/contact/" },
+        { title: "Service", link: "https://kraftor.in/services/" },
+        { title: "Team", link: "https://kraftor.in/team/" },
+        { title: "Contact", link: "https://kraftor.in/contact/" },
       ],
     },
     {
@@ -38,11 +38,23 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
       dropDown: [
         { title: "Internship", link: "/" },
         {
-          title: "Intern Portel",
+          title: "Intern Portal",
           link: "/downloads",
         },
         { title: "Registration", link: "/registration" },
       ],
+    },
+    {
+      title: "Career",
+      link: '/not-available'
+      // dropDown: [
+      //   { title: "Internship", link: "/" },
+      //   {
+      //     title: "Intern Portal",
+      //     link: "/downloads",
+      //   },
+      //   { title: "Registration", link: "/registration" },
+      // ],
     },
     {
       title: "Contact",

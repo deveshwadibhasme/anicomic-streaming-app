@@ -13,14 +13,14 @@ const ProgramSlider = () => {
       transition={{ duration: 0.8 }}
     >
       <motion.h1
-        className="text-xl font-subtitle font tracking-wider font-medium"
+        className="text-sm font-subtitle font tracking-wider font-medium"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
         transition={{ duration: 0.6 }}
       >
         Our Learning{" "}
-        <span className="text-vivid-indigo font-bold text-xl">Programs</span>
+        <span className="text-vivid-indigo font-bold text-sm uppercase">Programs</span>
       </motion.h1>
       <motion.p
         className="text-[12px] font-medium my-5"
