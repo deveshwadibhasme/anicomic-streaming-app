@@ -41,7 +41,7 @@ export const Project = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="max-w-screen-xl min-h-80 m-2 w-full overflow-x-auto flex items-center gap-2 justify-start p-10 "
+        className="max-w-screen-xl min-h-80 m-2 w-full overflow-x-auto flex items-center gap-4 justify-start p-10 "
       >
         {projectData.map((project) => {
           return (

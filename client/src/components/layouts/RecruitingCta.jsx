@@ -11,7 +11,7 @@ const RecruitingCta = () => {
       <motion.div
         initial={{ opacity: 0.2 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: false, amount: 0.8 }}
+        viewport={{ once: false, amount: 0.2 }}
         className="bg-gradient-to-r from-30% md:from-60% from-black to-80% md:to-90% w-full h-full max-w-screen min-h-90 md:min-h-screen flex items-center justify-center gap-5 flex-col pl-2 md:pl-20"
       >
         <motion.h1

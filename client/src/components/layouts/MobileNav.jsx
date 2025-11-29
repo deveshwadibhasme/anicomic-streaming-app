@@ -5,65 +5,10 @@ import logo from "../../assets/icons/anicomic-logo.png";
 import { FaAngleDoubleDown, FaBox, FaPlusCircle } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaCaretDown, FaCaretRight } from "react-icons/fa6";
+import { navLink } from "../../jsons/json";
 
 const MobileNav = ({ display, handleMenu, setDisplay }) => {
-  const navLink = [
-    {
-      title: "Home",
-      link: "/",
-      dropDown: false,
-    },
-    {
-      title: "Showcase",
-      link: false,
-      dropDown: [
-        { title: "Studio", link: "https://anicomic.vercel.app" },
-        { title: "Character", link: "/character" },
-        { title: "Comic", link: "/comic" },
-        { title: "Podcast", link: "/podcast" },
-        { title: "Live Action", link: "/live-action" },
-      ],
-    },
-    {
-      title: "Kraftor",
-      link: false,
-      dropDown: [
-        { title: "Kraftor Service", link: "https://kraftor.in/services/" },
-        { title: "Kraftor Team", link: "https://kraftor.in/team/" },
-        { title: "Kraftor Contact", link: "https://kraftor.in/contact/" },
-      ],
-    },
-    {
-      title: "Internship",
-      link: false,
-      dropDown: [
-        { title: "Internship", link: "https://internship.anicomic.in" },
-        {
-          title: "Intern Portel",
-          link: "https://internship.anicomic.in/downloads",
-        },
-        { title: "Registration", link: "/not-available" },
-      ],
-    },
-    {
-      title: "Contact",
-      link: "/contact-us",
-      dropDown: false,
-    },
-    {
-      title: "About",
-      link: "/not-available",
-      // dropDown: [
-      //   { title: "Character", link: "/character" },
-      //   { title: "Comic", link: "/comic" },
-      // ],
-    },
-    {
-      title: "Help",
-      link: "/not-available",
-      dropDown: false,
-    },
-  ];
+  
 
   const [drop, setDrop] = useState({ drop: false, idx: "" });
 
@@ -93,13 +38,13 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
                   {nav.title}
                   {nav.dropDown && <FaCaretDown className="ml-auto" />}
                 </Link>
-                <div className="flex flex-col w-[40%] max-h-60 transition-all duration-150 h-auto">
+                <div className="flex flex-col w-[70%] max-h-60 transition-all duration-150 h-auto">
                   {nav.dropDown &&
                     drop.drop &&
                     drop.idx === idx &&
                     nav.dropDown.map((drop, i) => {
                       return (
-                        <motion.a
+                        <motion.span
                           href={drop.link}
                           key={i}
                           initial={{ x: -40, opacity: 0 }}
@@ -109,10 +54,10 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
                           className="bg-bright-red/40 w-full p-2 rounded-xl cursor-pointer my-1"
                           onClick={() => setDisplay(!display)}
                         >
-                          <Link className="w-full min-w-full" to={drop.link}>
+                          <Link className="w-full min-w-full block" to={drop.link}>
                             {drop?.title}
                           </Link>
-                        </motion.a>
+                        </motion.span>
                       );
                     })}
                 </div>

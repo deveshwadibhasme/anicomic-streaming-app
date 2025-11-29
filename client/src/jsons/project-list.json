@@ -3,30 +3,30 @@
         "title":"Inside my Heart",
         "category":"Podcast",
         "language":["Hindi"],
-        "poster":""
-    },
-    {
-        "title":"The Unknown Origins",
-        "category":"Movies",
-        "language":["English","Hindi"],
-        "poster":""
+        "poster":"https://originals.anicomic.in/images/imh-poster.png"
     },
     {
         "title":"Arabian Knights",
         "category":"Series",
         "language":["English","Hindi"],
-        "poster":""
-    },
-    {
-        "title":"The Unknown",
-        "category":"Comic",
-        "language":["English"],
-        "poster":""
+        "poster":"https://originals.anicomic.in/images/arabian-poster.png"
     },
     {
         "title":"The Nightmare",
         "category":"Podcast",
         "language":["Hindi"],
-        "poster":""
+        "poster":"https://originals.anicomic.in/images/nightmare.png"
+    },
+    {
+        "title":"The Unknown",
+        "category":"Comic",
+        "language":["English"],
+        "poster":"https://originals.anicomic.in/images/unknown.png"
+    },
+    {
+        "title":"The Unknown Origins",
+        "category":"Movies",
+        "language":["English","Hindi"],
+        "poster":"https://originals.anicomic.in/images/unorigin-poster.png"
     }
 ]
