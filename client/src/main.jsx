@@ -7,13 +7,14 @@ import Home from "./pages/Home.jsx";
 
 import ContactUs from "./pages/ContactUs.jsx";
 import Career from "./pages/Career.jsx";
-import ComingSoon from "../../internship/src/pages/ComingSoon.jsx";
+import ComingSoon from "./pages/ComingSoon.jsx";
 
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement:<ComingSoon/>,
     children: [
       {
         path: "/",
