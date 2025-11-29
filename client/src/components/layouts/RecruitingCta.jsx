@@ -9,15 +9,16 @@ const RecruitingCta = () => {
       className="bg-contain bg-right bg-no-repeat max-w-screen min-h-80 md:min-h-screen md:h-full w-full z-10"
     >
       <motion.div
-        initial={{ opacity: 0.2, width: "20%" }}
-        whileInView={{ opacity: 1, width: "100%" }}
-        viewport={{ once: true, amount: 0.7 }}
+        initial={{ opacity: 0.2 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, amount: 0.8 }}
         className="bg-gradient-to-r from-30% md:from-60% from-black to-80% md:to-90% w-full h-full max-w-screen min-h-90 md:min-h-screen flex items-center justify-center gap-5 flex-col pl-2 md:pl-20"
       >
         <motion.h1
           initial={{ opacity: 0.2, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.7  }}
+          viewport={{ once: false, amount: 0.8 }}
+          transition={{ duration: 0.5, ease: "easeIn" }}
           className="font-title text-white text-3xl md:text-4xl max-w-xl mr-auto"
         >
           We are
@@ -27,7 +28,8 @@ const RecruitingCta = () => {
         <motion.p
           initial={{ opacity: 0.2, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.7  }}
+          viewport={{ once: false, amount: 0.8 }}
+          transition={{ duration: 0.5, ease: "easeIn" }}
           className="text-sm text-white mr-auto max-w-2xl"
         >
           We’d love to hear from you! Click below on Career and share your
@@ -36,13 +38,13 @@ const RecruitingCta = () => {
         </motion.p>
         <div className="w-1/2 min-h-20 flex items-center mr-auto gap-3">
           <Link
-            className="max-w-30 min-h-10 text-center pt-1.5 text-lg font-bold bg-light-yellow hover:bg-light-yellow/60 hover:text-white rounded-2xl w-full"
+            className="max-w-30 md:text-lg md:min-h-10 text-center py-1 md:pt-1.5 text-sm font-bold bg-light-yellow hover:bg-light-yellow/60 hover:text-white rounded-2xl w-full"
             to={"/not-available"}
           >
             Career
           </Link>
           <Link
-            className="max-w-30 min-h-10 text-center pt-1.5 text-lg font-bold bg-light-yellow hover:bg-light-yellow/60 hover:text-white rounded-2xl w-full"
+            className="max-w-30 md:text-lg md:min-h-10 text-center py-1 md:pt-1.5 text-sm font-bold bg-light-yellow hover:bg-light-yellow/60 hover:text-white rounded-2xl w-full"
             to={"https://internship.anicomic.in"}
           >
             Internship

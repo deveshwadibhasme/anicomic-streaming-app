@@ -51,7 +51,7 @@ const slides = [
         "title": "Inside My Heart",
         "ageLimit": "A / 18+",
         "language": ["English", "Hindi"],
-        "category": ["Horror", "Thriller"],
+        "category": ["Romance", "Thriller","HeartFull"],
         "description": "Hayat’s peaceful life shatters when a brutal murder and ghostly visions pull her into a terrifying mystery. What begins as a strange night turns into the haunting start of death itself.",
         "image": image2
     }
