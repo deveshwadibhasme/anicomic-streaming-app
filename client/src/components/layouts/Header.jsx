@@ -17,7 +17,7 @@ const Header = () => {
       title: "Showcase",
       link: false,
       dropDown: [
-        {title:'Studio',link:'https://anicomic.vercel.app/'},
+        { title: "Studio", link: "https://anicomic.vercel.app/" },
         { title: "Character", link: "/character" },
         { title: "Comic", link: "/comic" },
         { title: "Podcast", link: "/podcast" },
@@ -40,11 +40,11 @@ const Header = () => {
         { title: "Internship", link: "https://internship.anicomic.in" },
         {
           title: "Intern Portal",
-          link: "https://internship.anicomic.in/downloads",
+          link: "/downloads",
         },
         {
           title: "Registration",
-          link: "https://internship.anicomic.in/registration",
+          link: "/registration",
         },
       ],
     },
@@ -92,7 +92,6 @@ const Header = () => {
   return (
     <header className="max-w-screen w-full sticky top-0 z-20 flex justify-between mx-auto bg-black md:bg-gradient-to-t from-0% to-black">
       <Link
-
         href="https://anicomic.in"
         to={"https://anicomic.in"}
         className="min-h-10 p-1 rounded-lg text-white flex items-center text-lg my-1 mx-3"
@@ -108,7 +107,7 @@ const Header = () => {
                 <Link
                   key={idx}
                   to={nav.link || location.href}
-                  className="transition-colors group duration-300 text-center text-semibold flex gap-1 relative items-center text-sm max-w-80 w-full font-bold px-2"
+                  className="transition-colors group duration-300 text-center text-semibold gap-1 relative items-center text-sm max-w-80 w-full font-bold px-2 hidden md:flex"
                 >
                   {nav.title}
                   {nav.dropDown && <FaCaretDown className="ml-auto" />}
@@ -116,17 +115,15 @@ const Header = () => {
               ) : (
                 <div
                   key={idx}
-                  className="transition-colors group duration-300 text-center text-semibold flex gap-1 relative items-center text-sm max-w-80 w-full font-bold px-2 cursor-pointer"
+                  className="transition-colors group duration-300 text-center text-semibold gap-1 relative items-center text-sm max-w-80 w-full font-bold px-2 cursor-pointer hidden md:flex"
                 >
                   {nav.title}
                   {nav.dropDown && <FaCaretDown className="ml-auto" />}
-                  <div
-                    className="flex flex-col w-[150%] transition-all duration-150 h-0 overflow-hidden absolute top-5 py-2 pt-4 group-hover:h-auto left-auto bg-black/40 gap-1"
-                  >
+                  <div key={idx} className="flex flex-col w-[150%] transition-all duration-150 h-0 overflow-hidden absolute top-5 py-2 pt-4 group-hover:h-auto left-auto bg-black/40 gap-1">
                     {nav.dropDown &&
                       nav.dropDown.map((drop, i) => {
                         return (
-                          <motion.a
+                          <motion.div
                             href={drop.link}
                             key={i}
                             initial={{ x: -40, opacity: 0 }}
@@ -138,7 +135,7 @@ const Header = () => {
                             <Link className="w-full min-w-full" to={drop.link}>
                               {drop?.title}
                             </Link>
-                          </motion.a>
+                          </motion.div>
                         );
                       })}
                   </div>
