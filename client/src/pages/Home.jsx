@@ -3,6 +3,7 @@ import Carousel from "../components/Carousel";
 import { Project } from "../components/layouts/Project";
 import axios from "axios";
 import { slides } from "../jsons/json";
+import RecruitingCta from "../components/layouts/RecruitingCta";
 
 const Home = () => {
   const [slide, setSlides] = useState([]);
@@ -26,6 +27,7 @@ const Home = () => {
     <>
       <Carousel slides={slide} />
       <Project />
+      <RecruitingCta /> 
     </>
   );
 };

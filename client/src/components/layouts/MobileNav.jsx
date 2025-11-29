@@ -17,6 +17,7 @@ const MobileNav = ({ display, handleMenu, setDisplay }) => {
       title: "Showcase",
       link: false,
       dropDown: [
+        { title: "Studio", link: "https://anicomic.vercel.app" },
         { title: "Character", link: "/character" },
         { title: "Comic", link: "/comic" },
         { title: "Podcast", link: "/podcast" },
