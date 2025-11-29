@@ -5,80 +5,9 @@ import { FaBars } from "react-icons/fa";
 import { motion } from "framer-motion";
 import MobileNav from "./MobileNav";
 import { FaCaretDown } from "react-icons/fa6";
+import { navLink } from "../../jsons/json";
 
 const Header = () => {
-  const navLink = [
-    {
-      title: "Home",
-      link: "/",
-      dropDown: false,
-    },
-    {
-      title: "Showcase",
-      link: false,
-      dropDown: [
-        { title: "Studio", link: "https://anicomic.vercel.app/" },
-        { title: "Character", link: "/character" },
-        { title: "Comic", link: "/comic" },
-        { title: "Podcast", link: "/podcast" },
-        { title: "Live Action", link: "/live-action" },
-      ],
-    },
-    {
-      title: "Kraftor",
-      link: false,
-      dropDown: [
-        { title: "Service", link: "https://kraftor.in/services/" },
-        { title: "Team", link: "https://kraftor.in/team/" },
-        { title: "Contact", link: "https://kraftor.in/contact/" },
-      ],
-    },
-    {
-      title: "Internship",
-      link: false,
-      dropDown: [
-        { title: "Internship", link: "https://internship.anicomic.in" },
-        {
-          title: "Intern Portal",
-          link: "/downloads",
-        },
-        {
-          title: "Registration",
-          link: "/registration",
-        },
-      ],
-    },
-    {
-      title: "Career",
-      link: "/not-available",
-      // dropDown: [
-      //   { title: "Internship", link: "/" },
-      //   {
-      //     title: "Intern Portal",
-      //     link: "/downloads",
-      //   },
-      //   { title: "Registration", link: "/registration" },
-      // ],
-    },
-    {
-      title: "Contact",
-      link: "/contact-us",
-      dropDown: false,
-    },
-    {
-      title: "About",
-      link: "/not-available",
-      // dropDown: [
-      //   { title: "Character", link: "/character" },
-      //   { title: "Comic", link: "/comic" },
-      // ],
-    },
-    {
-      title: "Help",
-      link: "/not-available",
-      dropDown: false,
-    },
-  ];
 
   const [display, setDisplay] = useState();
   const handleMenu = () => {

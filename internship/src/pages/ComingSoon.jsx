@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaRocket, FaClock, FaTools } from "react-icons/fa";
-import AnimePoster from "../assets/anime-poster.png"; // Assuming you have an anime poster image
+import { getImage } from "../utils/get-image";
 
 const ComingSoon = () => {
   const containerVariants = {
@@ -28,7 +28,7 @@ const ComingSoon = () => {
   return (
     <section
       className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
-      style={{ backgroundImage: `url(${AnimePoster})` }}
+      style={{ backgroundImage: `url(${getImage('anime-poster.png')})` }}
     >
       <div className="absolute inset-0 bg-black opacity-90"></div>
       <motion.div
@@ -93,14 +93,14 @@ const ComingSoon = () => {
             Contact Us
           </motion.a>
           <motion.a
-            href="https://anicomic.in" // Replace with your main website link
-            target="_blank"
+            href="/"
+            // target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 text-white px-6 py-3 rounded-full text-sm md:text-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Visit Our Main Website
+            Go Back
           </motion.a>
         </motion.div>
       </motion.div>

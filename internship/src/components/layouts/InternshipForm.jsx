@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import img from "../../assets/night-sky.jpeg";
-import qr from "../../assets/qr.jpg";
 import HeadSection from "./HeadSection";
+import { getImage } from "../../utils/get-image";
 
 const InternshipForm = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +35,7 @@ const InternshipForm = () => {
   return (
     <section className="w-full mx-auto rounded-lg shadow-lg text-white">
       <HeadSection
-        poster={img}
+        poster={getImage('night-sky.jpeg')}
         title={"Join Our"}
         highlighted={"INTERNSHIP"}
         subtitle={"Program Today"}
@@ -52,7 +51,7 @@ const InternshipForm = () => {
         onSubmit={handleSubmit}
       >
         <div>
-        <img src={qr} className="h-60 w-60 mx-auto block" alt="" />
+        <img src={getImage('qr.jpg')} className="h-60 w-60 mx-auto block" alt="" />
          <div className="text-white mt-4">
             <label
               htmlFor="internship"

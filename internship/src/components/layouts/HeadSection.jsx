@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import doodle from '../../assets/doodle-bg.png'
+import { getImage } from "../../utils/get-image";
+
 
 const HeadSection = ({ poster,title,highlighted,subtitle,paragraph,highlightedPara }) => {
   return (
@@ -13,7 +14,7 @@ const HeadSection = ({ poster,title,highlighted,subtitle,paragraph,highlightedPa
       ></motion.div>
       <motion.div
         className="min-h-40 md:min-h-70 h-full max-w-screeen mx-auto text-center p-10 font-subtitle bg-cover w-full font tracking-wider font-medium bg-blend-color-burn"
-        style={{ backgroundImage: `url(${doodle})`}}
+        style={{ backgroundImage: `url(${getImage('doodle-bg.png')})`}}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

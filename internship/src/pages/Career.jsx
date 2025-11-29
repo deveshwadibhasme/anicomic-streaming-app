@@ -1,7 +1,5 @@
-import AnimePoster from "../assets/anime-poster.png";
 import { motion } from "framer-motion";
 import { courses } from "../jsons/json";
-import paper from "../assets/white-paper.png";
 
 import {
   FaBookOpen,
@@ -15,6 +13,7 @@ import HeadSection from "../components/layouts/HeadSection";
 import ProgramSlider from "../components/layouts/ProgramSlider";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { getImage } from "../utils/get-image";
 
 const items = [
   {
@@ -53,7 +52,7 @@ const Career = () => {
     <section className="w-full min-h-screen mx-auto  text-white overflow-hidden">
       
       <HeadSection
-        poster={AnimePoster}
+        poster={getImage('anime-poster.png')}
         title={"We are"}
         highlighted={"RECRUITING"}
         subtitle={"creative & awesome people"}

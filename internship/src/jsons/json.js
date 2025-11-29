@@ -1,9 +1,85 @@
-import k from '../assets/7.png'
-import f from '../assets/2.png'
-import w from '../assets/4.png'
-import m from '../assets/5.png'
-import c from '../assets/1.png'
-import b from '../assets/6.png'
+import { getImage } from "../utils/get-image";
+
+const navLink = [
+  {
+    title: "Home",
+    link: "/",
+    dropDown: false,
+  },
+  {
+    title: "Originals",
+    link: false,
+    dropDown: [
+      { title: "Originals", link: "http://originals.anicomic.in/" },
+      { title: "Character", link: "http://originals.anicomic.in/character" },
+      { title: "Comic", link: "http://originals.anicomic.in/comic" },
+      { title: "Podcast", link: "http://originals.anicomic.in/podcast" },
+      { title: "Live Action", link: "http://originals.anicomic.in/live-action" },
+    ],
+  },
+  {
+    title: "Kraftor",
+    link: false,
+    dropDown: [
+      { title: "Service", link: "https://kraftor.in/services/" },
+      { title: "Team", link: "https://kraftor.in/team/" },
+      { title: "Contact", link: "https://kraftor.in/contact/" },
+    ],
+  },
+  {
+    title: "Internship",
+    link: false,
+    dropDown: [
+      { title: "Internship", link: "/" },
+      {
+        title: "Intern Portal",
+        link: "/downloads",
+      },
+      {
+        title: "Registration",
+        link: "/registration",
+      },
+    ],
+  },
+  {
+    title: "Career",
+    link: "/not-available",
+    // dropDown: [
+    //   { title: "Internship", link: "/" },
+    //   {
+    //     title: "Intern Portal",
+    //     link: "/downloads",
+    //   },
+    //   { title: "Registration", link: "/registration" },
+    // ],
+  },
+  {
+    title: "Contact",
+    link: "/contact-us",
+    dropDown: false,
+  },
+  {
+    title: "About",
+    link: "/not-available",
+    // dropDown: [
+    //   { title: "Character", link: "/character" },
+    //   { title: "Comic", link: "/comic" },
+    // ],
+  },
+  {
+    title: "Help",
+    link: "/not-available",
+    dropDown: false,
+  },
+];
+
+
+// import k from 'https://internship.anicomic.in/image/7.png'
+// import f from 'https://internship.anicomic.in/image/2.png'
+// import w from 'https://internship.anicomic.in/image/4.png'
+// import m from 'https://internship.anicomic.in/image/5.png'
+// import c from 'https://internship.anicomic.in/image/1.png'
+// import b from 'https://internship.anicomic.in/image/6.png'
 
 const courses = [
   {
@@ -16,7 +92,7 @@ const courses = [
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-indigo',
-    image:k
+    image: getImage('7.png')
   },
   {
     id: "forged3d",
@@ -28,7 +104,7 @@ const courses = [
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-brown',
-    image:f
+    image: getImage('2.png')
   },
   {
     id: "theWebwar",
@@ -40,7 +116,7 @@ const courses = [
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-green',
-    image:w
+    image: getImage('4.png')
   },
   {
     id: "motionSpear",
@@ -52,7 +128,7 @@ const courses = [
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-brown',
-    image:m
+    image: getImage('5.png')
   },
   {
     id: "codeMania",
@@ -64,7 +140,7 @@ const courses = [
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-gradient-blue',
-    image:c
+    image: getImage('1.png')
   },
   {
     id: "bladeCut",
@@ -76,8 +152,8 @@ const courses = [
       brochure: true
     },
     gradient: 'bg-gradient-to-r from-black/90 from-5% to-vivid-red',
-    image:b
+    image: getImage('6.png')
   }
 ];
 
-export { courses}
+export { courses, navLink }

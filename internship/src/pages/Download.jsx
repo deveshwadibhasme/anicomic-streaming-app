@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import AnimePoster from "../assets/anime-city.png";
 import { useEffect, useState } from "react";
 import HeadSection from "../components/layouts/HeadSection";
 import FilteredSearch from "../components/FilteredSearch";
 import { FaDownload } from "react-icons/fa";
+import { getImage } from "../utils/get-image";
 
 const Download = () => {
   const [data, setData] = useState();
@@ -15,7 +15,7 @@ const Download = () => {
   return (
     <section className="w-full min-h-screen mx-auto mt-2 text-white overflow-hidden">
       <HeadSection
-        poster={AnimePoster}
+        poster={getImage('anime-city.png')}
         title={"Here you can"}
         highlighted={"DOWNLOAD"}
         subtitle={"certificate & offer letter"}
