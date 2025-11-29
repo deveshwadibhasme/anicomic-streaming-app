@@ -107,7 +107,7 @@ const Header = () => {
                 <Link
                   key={idx}
                   to={nav.link || location.href}
-                  className="transition-colors group duration-300 text-center text-semibold flex gap-1 relative items-center text-sm max-w-80 w-full font-bold px-2"
+                  className="transition-colors group duration-300 text-center text-semibold gap-1 relative items-center text-sm max-w-80 w-full font-bold px-2 hidden md:flex"
                 >
                   {nav.title}
                   {nav.dropDown && <FaCaretDown className="ml-auto" />}
@@ -115,7 +115,7 @@ const Header = () => {
               ) : (
                 <div
                   key={idx}
-                  className="transition-colors group duration-300 text-center text-semibold flex gap-1 relative items-center text-sm max-w-80 w-full font-bold px-2 cursor-pointer"
+                  className="transition-colors group duration-300 text-center text-semibold gap-1 relative items-center text-sm max-w-80 w-full font-bold px-2 cursor-pointer hidden md:flex"
                 >
                   {nav.title}
                   {nav.dropDown && <FaCaretDown className="ml-auto" />}
