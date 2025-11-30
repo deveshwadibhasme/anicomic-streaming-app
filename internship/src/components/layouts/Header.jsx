@@ -48,7 +48,7 @@ const Header = () => {
                 >
                   {nav.title}
                   {nav.dropDown && <FaCaretDown className="ml-auto" />}
-                  <div className="flex flex-col w-[150%] transition-all duration-150 h-0 overflow-hidden absolute top-5 py-2 pt-4 group-hover:h-auto left-auto bg-black/40 gap-1">
+                  <div className="flex flex-col w-[180%] transition-all duration-150 h-0 overflow-hidden absolute top-5 py-2 pt-4 group-hover:h-auto left-auto bg-black/40 gap-1">
                     {nav.dropDown &&
                       nav.dropDown.map((drop, i) => {
                         return (

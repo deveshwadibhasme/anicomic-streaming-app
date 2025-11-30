@@ -7,10 +7,10 @@ const navLink = [
     dropDown: false,
   },
   {
-    title: "Originals",
+    title: "Studio",
     link: false,
     dropDown: [
-      { title: "Originals", link: "http://originals.anicomic.in/" },
+      { title: "Studio", link: "http://originals.anicomic.in/" },
       { title: "Character", link: "http://originals.anicomic.in/character" },
       { title: "Comic", link: "http://originals.anicomic.in/comic" },
       { title: "Podcast", link: "http://originals.anicomic.in/podcast" },

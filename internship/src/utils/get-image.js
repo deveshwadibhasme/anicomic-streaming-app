@@ -7,7 +7,7 @@ export const getImage = (imagePath) => {
       return `/src/assets/for-cloud/${imagePath}`;
     }
 
-    if(location.origin === vercelUrl || location.href === hostedUrl) {
+    if(location.origin === vercelUrl || location.origin === hostedUrl) {
       return `${hostedUrl}/images/${imagePath}`;
     }
   
