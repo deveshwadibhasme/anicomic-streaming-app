@@ -3,11 +3,11 @@ export const getImage = (imagePath) => {
   const vercelUrl = "https://anicomic.vercel.app/";
   const hostedUrl = "https://anicomic.in/";
 
-    if(location.href === localUrl) {
+    if(location.origin === localUrl) {
       return `/src/assets/${imagePath}`;
     }
 
-    if(location.href === vercelUrl || location.href === hostedUrl) {
+    if(location.origin === vercelUrl || location.origin === hostedUrl) {
       return `${hostedUrl}/image-assets/${imagePath}`;
     }
   

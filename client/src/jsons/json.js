@@ -5,10 +5,10 @@ const navLink = [
     dropDown: false,
   },
   {
-    title: "Originals",
+    title: "Studio",
     link: false,
     dropDown: [
-      { title: "Originals", link: "/" },
+      { title: "Studio", link: "/" },
       { title: "Character", link: "/character" },
       { title: "Comic", link: "/comic" },
       { title: "Podcast", link: "/podcast" },
@@ -72,36 +72,36 @@ const navLink = [
 ];
 
 const projectList = [
-  {
-    "title": "Inside my Heart",
-    "category": "Podcast",
-    "language": ["Hindi"],
-    "poster": ""
-  },
-  {
-    "title": "The Unknown Origins",
-    "category": "Movies",
-    "language": ["English", "Hindi"],
-    "poster": ""
-  },
-  {
-    "title": "Arabian Knights",
-    "category": "Series",
-    "language": ["English", "Hindi"],
-    "poster": ""
-  },
-  {
-    "title": "The Unknown",
-    "category": "Comic",
-    "language": ["English"],
-    "poster": ""
-  },
-  {
-    "title": "The Nightmare",
-    "category": "Podcast",
-    "language": ["Hindi"],
-    "poster": ""
-  }
+    {
+        "title":"Inside my Heart",
+        "category":"Podcast",
+        "language":["Hindi"],
+        "poster":"https://originals.anicomic.in/images/imh-poster.png"
+    },
+    {
+        "title":"Arabian Knights",
+        "category":"Series",
+        "language":["English","Hindi"],
+        "poster":"https://originals.anicomic.in/images/arabian-poster.png"
+    },
+    {
+        "title":"The Nightmare",
+        "category":"Podcast",
+        "language":["Hindi"],
+        "poster":"https://originals.anicomic.in/images/nightmare.png"
+    },
+    {
+        "title":"The Unknown",
+        "category":"Comic",
+        "language":["English"],
+        "poster":"https://originals.anicomic.in/images/unknown.png"
+    },
+    {
+        "title":"The Unknown Origins",
+        "category":"Movies",
+        "language":["English","Hindi"],
+        "poster":"https://originals.anicomic.in/images/unorigin-poster.png"
+    }
 ]
 
 import image1 from "../assets/nightmare-bg.png";
